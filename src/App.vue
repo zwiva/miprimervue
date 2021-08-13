@@ -1,17 +1,18 @@
 <template>
-  <table class="table card">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">RUT</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Fecha de nacimiento</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- <tr>
+  <div class="d-flex card mx-auto m-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">RUT</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Fecha de nacimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
         <th scope="row">1</th>
         <td>Andrea</td>
         <td>Castro</td>
@@ -19,16 +20,17 @@
         <td>34</td>
         <td>09-01-1987</td>
       </tr> -->
-      <tr v-for="(persona, $index) in personas" :key="$index">
-        <th scope="row">{{ $index }}</th>
-        <td>{{ persona.nombre }}</td>
-        <td>{{ persona.apellido }}</td>
-        <td>{{ persona.rut }}</td>
-        <td>{{ persona.edad }}</td>
-        <td>{{ persona.fechadenacimiento }}</td>
-      </tr>
-    </tbody>
-  </table>
+        <tr v-for="(persona, $index) in personas" :key="$index">
+          <th scope="row">{{ $index }}</th>
+          <td>{{ persona.nombre }}</td>
+          <td>{{ persona.apellido }}</td>
+          <td>{{ persona.rut }}</td>
+          <td>{{ persona.edad }}</td>
+          <td>{{ persona.fechadenacimiento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -70,8 +72,9 @@ export default {
 </script>
 
 <style>
-#app {
-  background-color: cadetblue;
+.card {
+  width: 90%;
+  max-width: 600px;
+  overflow-x: scroll;
 }
-
 </style>
