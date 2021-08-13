@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex card mx-auto m-5">
-    <table class="table">
+    <table class="table table-striped table-dark text-white-50">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -12,16 +12,8 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr>
-        <th scope="row">1</th>
-        <td>Andrea</td>
-        <td>Castro</td>
-        <td>12.345.678-9</td>
-        <td>34</td>
-        <td>09-01-1987</td>
-      </tr> -->
-        <tr v-for="(persona, $index) in personas" :key="$index">
-          <th scope="row">{{ $index }}</th>
+        <tr v-for="(persona, index) in personas" :key="index">
+          <th scope="row">{{ index }}</th>
           <td>{{ persona.nombre }}</td>
           <td>{{ persona.apellido }}</td>
           <td>{{ persona.rut }}</td>
